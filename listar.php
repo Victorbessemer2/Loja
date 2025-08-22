@@ -5,7 +5,7 @@ include 'cabecalho.php';
 <body>
     <div class="container">
         <h1>Bem Vindo ao 1º Sistema com CRUD</h1>
-        <h2>Pietro Alfa e Victor Gigante</h2>
+        <h2>Victor Gigante</h2>
         <table class="table">
             <thead>
                 <tr>
@@ -17,18 +17,26 @@ include 'cabecalho.php';
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Biriri</td>
-                    <td>R$ 3000.99</td>
-                    <td>10</td>
+
+                <?php
+                require 'conexao.php';
+                $sql = "SELECT * FROM produtos";
+                $stmt = $pdo->query($sql);
+                while ($produto = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<tr>";
+                    echo "<td>" . $produto['id'] . "</td>";
+                    echo "<td>" . $produto['nome'] . "</td>";
+                    echo "<td>" . $produto['preco'] . "</td>";
+                    echo "<td>" . $produto['quantidade'] . "</td>";
+                    echo "
                     <td>
-                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                            <a href="#" type="button" class="btn btn-danger">Atualizar</a>
-                            <a href="#" type="button" class="btn btn-warning">Apagar</a>
+                        <div class='btn-group' role= 'group'>
+                            <a href='#' type='button' class='btn btn-success'>Atualizar</a>
+                            <a href='#' type='button' class='btn btn-danger'>Apagar</a>
                         </div>
-                    </td>
-                </tr>
+                    </td>";
+                }
+                ?>
             </tbody>
         </table>
     </div>
