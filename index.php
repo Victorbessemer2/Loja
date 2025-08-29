@@ -5,7 +5,7 @@
 <body>
     <div class="container">
         <h1>Bem vindo ao 1º sistema Web com CRUD</h1>
-        <h2>Pietro solo alfa master e Victor Gigante</h2>
+        <h2>Victor Gigante</h2>
         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
             <a href = "form_cadastrar.php" type="button" class="btn btn-danger">Cadastrar</a>
             <a href = "listar.php" type="button" class="btn btn-warning">Listar</a>
