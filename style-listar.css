@@ -1,0 +1,48 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e fundo geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Container centralizado com padding */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 25px;
+}
+
+/* Cabeçalho */
+h1, h2 {
+    color: #e60014; /* vermelho Americanas */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lead {
+    color: #666;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+/* Botões estilo Americanas */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    margin-right: 15px;
+    color: white

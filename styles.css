@@ -1,0 +1,98 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fonte e fundo geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Container centralizado com padding */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 25px;
+}
+
+/* Cabeçalho */
+h1 {
+    color: #e60014; /* vermelho Americanas */
+    font-weight: 700;
+    margin-bottom: 10px;
+    font-size: 2.8rem;
+}
+
+.lead {
+    color: #666;
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+/* Botões estilo Americanas */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    margin-right: 15px;
+    color: white;
+    box-shadow: 0 3px 8px rgb(230 0 20 / 0.4);
+}
+
+.btn-primary {
+    background-color: #e60014;
+}
+
+.btn-primary:hover {
+    background-color: #b80011;
+}
+
+.btn-secondary {
+    background-color: #f5f5f5;
+    color: #e60014;
+    box-shadow: none;
+    border: 2px solid #e60014;
+}
+
+.btn-secondary:hover {
+    background-color: #ffe6e9;
+}
+
+/* Depoimentos */
+.depoimentos {
+    margin-top: 50px;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+}
+
+.depoimentos h2 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #e60014;
+}
+
+.depoimentos p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Responsividade básica */
+@media(max-width: 600px) {
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

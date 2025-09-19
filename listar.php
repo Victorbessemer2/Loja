@@ -1,43 +1,47 @@
 <?php
-include 'cabecalho.php';
-?>
-
-<body>
+    include 'cabecalho.php';
+    ?>
+    <link rel="stylesheet" href="style-listar.css" />
+<body>    
     <div class="container">
-        <h1>Bem Vindo ao 1º Sistema com CRUD</h1>
-        <h2>Victor Gigante</h2>
+        <h2>LISTAGEM DE PRODUTOS</h2>
         <table class="table">
             <thead>
                 <tr>
                     <th scope="col">ID</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Preço</th>
-                    <th scope="col">Quantidade</th>
-                    <th scope="col">Opções</th>
+                    <th scope="col">NOME</th>
+                    <th scope="col">PREÇO</th>
+                    <th scope="col">QUANTIDADE</th>
+                    <th scope="col">OPÇÕES</th>
                 </tr>
             </thead>
             <tbody>
 
-                <?php
+            <?php
                 require 'conexao.php';
                 $sql = "SELECT * FROM produtos";
                 $stmt = $pdo->query($sql);
                 while ($produto = $stmt->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>";
-                    echo "<td>" . $produto['id'] . "</td>";
-                    echo "<td>" . $produto['nome'] . "</td>";
-                    echo "<td>" . $produto['preco'] . "</td>";
-                    echo "<td>" . $produto['quantidade'] . "</td>";
+                    echo "<td>".$produto['id']."</td>";
+                    echo "<td>".$produto['nome']."</td>";
+                    echo "<td>".$produto['preco']."</td>";
+                    echo "<td>".$produto['quantidade']."</td>";
                     echo "
-                    <td>
-                        <div class='btn-group' role= 'group'>
-                            <a href='form_atualizar.php?id=". $produto['id'] . "' type='button' class='btn btn-success'>Atualizar</a>
-                            <a href='#' type='button' class='btn btn-danger'>Apagar</a>
-                        </div>
-                    </td>";
+                        <td>
+                            <div class='btn-group' role='group'>
+                                <a href='form_atualizar.php?id=".$produto['id']."' type='button' class='btn btn-primary'>Atualizar</a>
+                                <a href='apagar.php?id=".$produto['id']."' type='button' class='btn btn-danger' onclick='return confirm(\"Tem certeza que deseja apagar este produto?\");'>Apagar</a>
+                            </div>
+                        </td>
+                    ";
+
+                    echo "</tr>";                                        
                 }
-                ?>
+                ?>                                
             </tbody>
         </table>
+        <a href='index.php?id=".$produto."' type='button' class='btn btn-primary'>Voltar</a>
     </div>
 </body>
+</html>
