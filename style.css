@@ -11,12 +11,18 @@ body {
     background-color: #fff;
     color: #333;
     min-height: 100vh;
+
+    /* Centraliza tudo na tela */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-/* Container centralizado com padding */
+/* Container centralizado */
 .container {
     max-width: 900px;
-    margin: 40px auto;
     padding: 20px 25px;
 }
 
@@ -43,7 +49,7 @@ h1 {
     text-decoration: none;
     cursor: pointer;
     border: none;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
     font-size: 1rem;
     margin-right: 15px;
     color: white;
@@ -56,6 +62,8 @@ h1 {
 
 .btn-primary:hover {
     background-color: #b80011;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(230, 0, 20, 0.4);
 }
 
 .btn-secondary {
@@ -67,33 +75,50 @@ h1 {
 
 .btn-secondary:hover {
     background-color: #ffe6e9;
+    transform: translateY(-2px);
 }
 
-/* Depoimentos */
-.depoimentos {
-    margin-top: 50px;
-    border-top: 1px solid #eee;
-    padding-top: 30px;
-}
-
-.depoimentos h2 {
-    font-weight: 700;
-    font-size: 1.6rem;
-    margin-bottom: 20px;
-    color: #e60014;
-}
-
-.depoimentos p {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* Responsividade básica */
+/* Responsividade */
 @media(max-width: 600px) {
     .btn {
         width: 100%;
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 }
+/* Navbar fixa no topo */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #e60014; /* Vermelho Americanas */
+  padding: 15px 20px;
+  z-index: 1000;
+}
 
+/* Container da navbar */
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Centraliza os links */
+}
+
+/* Links */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffd6d6; /* Vermelho mais claro no hover */
+}
+
+/* Espaço para o conteúdo não ficar atrás da navbar */
+main {
+  margin-top: 70px; /* Ajuste conforme altura da navbar */
+}

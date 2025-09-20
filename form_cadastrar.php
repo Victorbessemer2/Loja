@@ -16,13 +16,12 @@
                 <input type="text" name="estoque" class="form-control" placeholder="Digite a quantidade do produto" required>
             </div>
             <div class="centralizar-botoes">
-                <button type="submit" class="btn btn-primary btn-lg shadow rounded-pill">Enviar</button>
-                <button type="" class="btn">Voltar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <a href='index.php?id=".$produto."' type='button' class='btn btn-secondary'>Voltar</a>
             </div>
         </form>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
